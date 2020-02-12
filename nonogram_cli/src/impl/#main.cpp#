@@ -1,0 +1,23 @@
+/*Copyright 2020 Alex Bieliakov*/
+
+#include <iostream>
+
+#include <boost/log/trivial.hpp>
+
+#include "nonogram_factory.hpp"
+
+int main() {
+    BOOST_LOG_TRIVIAL(trace) << "A trace severity message";
+    BOOST_LOG_TRIVIAL(debug) << "A debug severity message";
+    BOOST_LOG_TRIVIAL(info) << "An informational severity message";
+    BOOST_LOG_TRIVIAL(warning) << "A warning severity message";
+    BOOST_LOG_TRIVIAL(error) << "An error severity message";
+    BOOST_LOG_TRIVIAL(fatal) << "A fatal severity message";
+
+  
+  std::vector<std::vector<uint8_t>> r;
+  std::vector<std::vector<uint8_t>> c;
+  auto nonogram = MakeNonogram(r, c);
+  std::cout << "Hello, world!" << std::endl;
+  return 0;
+}

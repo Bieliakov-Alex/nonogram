@@ -1,3 +1,8 @@
+/*Copyright 2020 Alex Bieliakov*/
+
+#ifndef NONOGRAM_INCLUDE_I_NONOGRAM_HPP
+#define NONOGRAM_INCLUDE_I_NONOGRAM_HPP
+
 #include <cstdint>
 #include <vector>
 
@@ -35,3 +40,5 @@ public:
    */
   virtual std::vector<uint8_t> getColumnFigures(uint8_t column) = 0;
 };
+
+#endif //  NONOGRAM_INCLUDE_I_NONOGRAM_HPP
