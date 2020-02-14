@@ -1,9 +1,16 @@
+/*Copyright 2020 Alex Bieliakov*/
+
+#ifndef NONOGRAM_SRC_INCL_NONOGRAM_HPP_
+#define NONOGRAM_SRC_INCL_NONOGRAM_HPP_
+
+#include <vector>
+
 #include "i_nonogram.hpp"
 
 class Nonogram : public INonogram {
 public:
-  Nonogram(std::vector<std::vector<uint8_t>> RowsFigures,
-           std::vector<std::vector<uint8_t>> ColumnsFigures);
+  Nonogram(const std::vector<std::vector<uint8_t>> &RowsFigures,
+           const std::vector<std::vector<uint8_t>> &ColumnsFigures);
 
   uint8_t getRows() override;
 
@@ -22,3 +29,5 @@ private:
 
   std::vector<std::vector<uint8_t>> column_figures_;
 };
+
+#endif //  NONOGRAM_SRC_INCL_NONOGRAM_HPP_
