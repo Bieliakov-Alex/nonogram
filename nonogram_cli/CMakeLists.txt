@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(nonogram_cli)
 
 add_definitions(-DBOOST_LOG_DYN_LINK)
-find_package(Boost 1.67.0 COMPONENTS log REQUIRED)
+find_package(Boost 1.65.0 COMPONENTS log REQUIRED)
 find_package(Threads)
 
 include_directories(include)
