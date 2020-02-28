@@ -9,6 +9,18 @@
 
 int main() {
   BOOST_LOG_TRIVIAL(info) << "Nonogram_cli started.";
+
+  std::vector<std::vector<uint8_t>> empty_rows, empty_columns;
+  auto empty_nonogram = MakeNonogram(empty_rows, empty_columns);
+
+  auto row_size = empty_nonogram->getRows();
+
+  if (row_size == 0) {
+    std::cout << "Good" << '\n';
+  } else {
+    std::cout << "Bad" << '\n';
+  }
+
   std::vector<std::vector<uint8_t>> r;
   std::vector<uint8_t> r_1{1, 2, 3, 4};
   r.push_back(r_1);
